@@ -1,13 +1,18 @@
-angular.module('EmailApp', [
+/* The model for the data entry pages
+ *
+ *
+ */
+
+angular.module('DataEntry', [
   'ngRoute'
 ]).config(function ( $routeProvider ) {
   'use strict';
   $routeProvider
-    .when('/inbox', {
-      templateUrl: 'views/inbox.html',
-      controller: 'InboxCtrl'
+    .when('/instructions', {
+      templateUrl: 'views/instructions.html',
+      controller: 'PageCtrl'
     })
     .otherwise({
-      redirectTo: '/inbox'
+      redirectTo: '/instructions'
     });
 });

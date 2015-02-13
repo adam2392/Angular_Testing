@@ -1,16 +1,107 @@
-<html ng-app="EmailApp">
-	<head>
-		<meta charset="utf-8">
-		<title>Angular JS Email App </title>
-		<link href="css/style.css" rel="stylesheet">
-	</head>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" ng-app="DataEntry"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Data Entry Page</title>
+        <meta name="description" content="The Emmersiv team at West Health Institute builds software products that help children with autism undergo behavioral therapy through thought out games and interactive UI.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<body>
-		<main class="main" role="main">
-			<div class="wrapper">
-				<div ng-view></div>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap-3.3.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/data_entry.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+
+	<body id="home">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Top Nav Bar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+	        		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+	          		</button>
+	          		<!-- <h1 id="site-name" class="logo">
+	          				<a class="navbar-brand" href="/pictures***">
+	          			</h1> -->
+	          		<a class="navbar-brand" href="#">West Health Institute</a>
+	        	</div>
+
+	        	<!-- Menu items -->
+	        	<div id="navbar" class="collapse navbar-collapse">
+	          		<ul class="nav navbar-nav">
+			            <li class="active"><a href="#">Home</a></li>
+			            <li><a href="#about">About</a></li>
+			            <li><a href="#example">Examples</a></li>
+			            <li><a href="#contact">Contact</a></li>
+	          		</ul>
+	        	</div><!--/.nav-collapse -->
+	      	</div>
+	    </nav>
+
+	    <div class=main-wrap>
+		    <!-- Vertical Nav Bar -->
+		    <div class="vertical-nav">
+		    	<!-- Search bar -->
+				<div id="search">
+					<input id="search" type="text" placeholder="Search email">
+				</div>
+				
+				<!-- Links to all the pages with data entry forms -->
+				<div id="data_links">
+					<ul>
+						<li>
+							<a href="#dummy.html" title="Home Page">Home</a>
+						</li>
+						<li>
+							<a href="#dummy.html" title="SUS Score">SUS Score</a>
+						</li>
+						<li>
+							<a href="#dummy.html" title="Vineland Scores">Vineland Scores</a>
+						</li>
+						<li>
+							<a href="#dummy.html" title="RIST Scores">RIST Scores</a>
+						</li>
+						<li>
+							<a href="#dummy.html" title="SCQ Score">SCQ Scores</a>
+						</li>
+						<li>
+							<a href="#dummy.html" title="Brief Form">Brief Form</a>
+						</li>
+						<li>
+							<a href="#dummy.html" title="SRS2 Profile Sheets">SRS2 Profile Sheets</a>
+						</li>
+						<li>
+							<a href="#dummy.html" title="TRIAD Child">TRIAD Child Scores</a>
+						</li>
+						<li>
+							<a href="#dummy.html" title="TRIAD Parent">TRIAD Parent Scores</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</main>
+
+			<!-- Modify views here -->
+			<div class="main">
+			<main role="main">
+				<div ng-view> <!-- Where we will inject html --> </div>
+			</main>
+			</div>
+
+		</div> <!-- end of main-wrap -->
 
     <!-- Vendor libraries -->
     <script src="lib/jquery-v1.11.1.js"></script>
@@ -19,8 +110,8 @@
 
     <!-- Application Files -->
     <script src="js/app.js"></script>
-    <script src="js/controllers/inbox.js"></script>
-    <script src="js/factories/InboxFactory.js"></script>
-    <script src="js/directives/inbox.js"></script>
+    <script src="js/controllers/page.js"></script>
+   	<!-- <script src="js/factories/InboxFactory.js"></script>
+    // <script src="js/directives/inbox.js"></script> -->
 	</body>
 </html>
