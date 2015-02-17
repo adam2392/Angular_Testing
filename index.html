@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> 
-<html class="no-js" ng-app="DataEntry"> <!--<![endif]-->
+<html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,53 +52,53 @@
 	      	</div>
 	    </nav>
 
-	    <div class=main-wrap>
+	    <div class=main-wrap ng-app="DataEntry">
 		    <!-- Vertical Nav Bar -->
 		    <div class="vertical-nav">
 		    	<!-- Search bar -->
 				<div id="search">
-					<input id="search" type="text" placeholder="Search email">
+					<input id="search" type="text" placeholder="Search">
 				</div>
 				
 				<!-- Links to all the pages with data entry forms -->
-				<div id="data_links">
+				<div id="data_links" ng-controller="MainCtrl">
 					<ul>
 						<li>
-							<a href="#dummy.html" title="Home Page">Home</a>
+							<a title="Home Page" ng-click="ChangeView('instructions')">Home</a>
 						</li>
 						<li>
-							<a href="#dummy.html" title="SUS Score">SUS Score</a>
+							<a title="SUS Score" ng-click="ChangeView('sus')">SUS Score</a>
 						</li>
 						<li>
-							<a href="#dummy.html" title="Vineland Scores">Vineland Scores</a>
+							<a ng-click="ChangeView('vineland')" title="Vineland Scores">Vineland Scores</a>
 						</li>
 						<li>
-							<a href="#dummy.html" title="RIST Scores">RIST Scores</a>
+							<a ng-click="ChangeView('rist')" title="RIST Scores">RIST Scores</a>
 						</li>
 						<li>
-							<a href="#dummy.html" title="SCQ Score">SCQ Scores</a>
+							<a ng-click="ChangeView('scq')" title="SCQ Score">SCQ Scores</a>
 						</li>
 						<li>
-							<a href="#dummy.html" title="Brief Form">Brief Form</a>
+							<a ng-click="ChangeView('brief')" title="Brief Form">Brief Form</a>
 						</li>
 						<li>
-							<a href="#dummy.html" title="SRS2 Profile Sheets">SRS2 Profile Sheets</a>
+							<a ng-click="ChangeView('srs2')" title="SRS2 Profile Sheets">SRS2 Profile Sheets</a>
 						</li>
 						<li>
-							<a href="#dummy.html" title="TRIAD Child">TRIAD Child Scores</a>
+							<a ng-click="ChangeView('triadchild')" title="TRIAD Child">TRIAD Child Scores</a>
 						</li>
 						<li>
-							<a href="#dummy.html" title="TRIAD Parent">TRIAD Parent Scores</a>
+							<a ng-click="ChangeView('triadparent')" title="TRIAD Parent">TRIAD Parent Scores</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 
 			<!-- Modify views here -->
-			<div class="main">
-			<main role="main">
-				<div ng-view> <!-- Where we will inject html --> </div>
-			</main>
+			<div class="main" ng-controller="MainCtrl">
+				<main role="main">
+					<div ng-view> <!-- Where we will inject html --> </div>
+				</main>
 			</div>
 
 		</div> <!-- end of main-wrap -->
@@ -110,8 +110,8 @@
 
     <!-- Application Files -->
     <script src="js/app.js"></script>
-    <script src="js/controllers/page.js"></script>
-   	<!-- <script src="js/factories/InboxFactory.js"></script>
-    // <script src="js/directives/inbox.js"></script> -->
+    <script src="js/controllers/main.js"></script>
+   	<!-- // <script src="js/factories/EntryFactory.js"></script> -->
+    <!-- <script src="js/directives/inbox.js"></script> -->
 	</body>
 </html>
