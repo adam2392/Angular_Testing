@@ -1,0 +1,55 @@
+body {
+	height: 100%;
+	width: 100%;
+}
+.main-wrap {
+	margin-top: 50px; 	/* to line up with the nav bar*/
+	height: 100%;
+	width: 100%;
+}
+/******** Nav Bar *************/
+.vertical-nav {
+	margin-bottom: auto;
+	margin-right: 10px;
+	float: left;
+	height: 100vh;
+	padding-right: 10px;
+
+	background-color: #d3d3d3;
+	border: 2px solid black;
+
+	/* Text manipulation */
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.vertical-nav #search {
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.vertical-nav ul {
+}
+
+.vertical-nav li {
+	list-style: none;
+	margin: 3px;
+}
+
+.vertical-nav #data_links {
+	padding-left: -10px;
+}
+
+.vertical-nav li a {
+	text-decoration: none;
+	color: black;
+}
+
+.vertical-nav li a:hover {
+	text-decoration: underline;
+}
+
+/********** Main View Page *********/
+.main {
+	float: left;
+}
