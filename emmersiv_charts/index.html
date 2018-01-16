@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- google font -->
+        <link href='http://fonts.googleapis.com/css?family=Doppio%20One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        
+        <!-- less scripts -->
+        <link rel="stylesheet/less" type="text/css" href="style/style.less">
+        <link rel="stylesheet" href="style/bootstrap-3.3.2-dist/css/bootstrap.min.css">
+        <script src="lib/less.min.js"></script>   
+        
+        <!-- reference to main app using require.js -->
+        <script data-main="scripts/app" src="lib/require.js"></script>
+        <script src="lib/jquery-1.11.2.min.js"></script>
+        
+        <!-- For high charts -->
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <script src="http://code.highcharts.com/adapters/standalone-framework.js"></script>
+        
+        <script type="text/javascript" src="/scripts/gray.js"></script>
+    </head>
+    
+    <body>
+        <div id="loader">
+            <div>
+                <img id="loaderImg" src="img/loader.GIF"/>
+                <h2 id="loadMessage">Loading...</h2>
+            </div>
+        </div>
+        
+        <div id="data">
+        </div>
+    </body>
+</html>

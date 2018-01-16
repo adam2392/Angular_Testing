@@ -1,0 +1,122 @@
+<html lang="en">
+	<link rel="stylesheet" type="text/css" href="mailcompose.css" />
+	<script src="jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  
+	<head>
+		<title>Mail Composition Page</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<img src="mail.png">
+			<span id="title">ninemsn</span>
+		</div>
+
+		<div class="nav">
+			<div class="wrapper">
+				<div class="wrapper-dropdown-1" id="dd">
+					<span> Outlook | </span>
+					<ul class="dropdown">
+						<li><a href='#'>I'm hidden!</a></li>
+						<li><a href='#'>I'm hidden too!</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="wrapper">
+				<button id="send" type="button">Send</button>
+				<button id="draft" type="button">Save Draft</button>
+				<button id="options" type="button">Options</button>
+				<button id="cancel" type="button">Cancel</button>
+			</div>
+
+			<div class="settings">
+				<img id="chat" src="">
+				<img id="settings" src="">
+				<span id="name">Adam Li</span>
+				<img id="human-icon" src="">
+			</div>
+		</div>
+
+
+		<div class="mail-header">
+			<div id="self">
+				<img id="human-icon" src="credit.svg">
+				<span id="name">Adam Li</span>
+				<span id="email">adam2392@gmail.com</span>
+			</div>
+			<div id="address">
+				<span id="to">To</span>
+				<span id="bcc">Cc & Bcc</span>
+				<br>
+				<input type="text" id="input"/>
+			</div>
+		</div>
+
+		<div class="mail-body">
+			<div id="subject">
+				<input type="text" placeholder="Add a subject">
+			</div>
+			<hr>
+
+			<div id="body">
+				<textarea type="text" placeholder="Type your message here"></textarea>
+			</div>
+		</div>
+
+		<div class="footer">	
+			<hr>
+			<p class="footer-text">&copy;2014 Microsoft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privacy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Developers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English (United States)</p>
+		</div>
+
+		<!-- jQuery if needed -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			
+			function DropDown(el) {
+				this.dd = el;
+				this.placeholder = this.dd.children('span');
+				this.opts = this.dd.find('ul.dropdown > li');
+				this.val = '';
+				this.index = -1;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						return false;
+					});
+
+					obj.opts.on('click',function(){
+						var opt = $(this);
+						obj.val = opt.text();
+						obj.index = opt.index();
+					});
+				},
+				getValue : function() {
+					return this.val;
+				},
+				getIndex : function() {
+					return this.index;
+				}
+			}
+
+			$(function() {
+
+				var dd = new DropDown( $('#dd') );
+
+				$(document).click(function() {
+					// all dropdowns
+					$('.wrapper-dropdown-1').removeClass('active');
+				});
+
+			});
+			
+		</script>
+
+	</body>
+</html>

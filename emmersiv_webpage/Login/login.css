@@ -1,0 +1,66 @@
+html {
+	background-color: #008B8B;
+	font-size: 15pt;
+}
+
+/* So far get rid of bullet points */
+ul {
+	list-style-type: none;
+	text-align: center;
+}
+
+/* All separate buttons */
+#forgotpw {
+	color: white;	
+	right: 16.5%;
+	margin-top: -20px;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+/* Create account buttons */
+#createacct {
+	color: green;
+	border-bottom: solid 2px;
+	display: inline;
+	padding-bottom: 3px;
+}
+
+/* Input area */
+input, select, textarea {
+	/* Fix the border and size of box */
+	border-style: none;
+	border-radius: 5px;
+	width: 400px;
+	height: 75px;
+	margin-bottom: 10px;
+
+	/* Add padding to what you type in */
+	padding: 0px 20px;
+	position: relative;
+	font-size: 15px;
+}
+
+#login input, select, textarea {
+	background-color: green;
+	color: white;
+	text-decoration: bold;
+	font-size: 20px;
+}
+
+/* Changer properties when links are hovered over */
+#login input:hover, #forgotpw:hover, #createacct:hover {
+	cursor: pointer;
+}
+
+input[type="password"] {
+	-webkit-text-security: circle;
+}
+
+/* Wrapper for entire login page */
+#wrap {
+	width: 800px;
+	margin: 0 auto;
+	top: 30%; /* How much % move down from top */
+	position: relative; /* Add to help position vertically */
+}

@@ -1,0 +1,125 @@
+<html lang="en">
+	<link rel="stylesheet" type="text/css" href="payment.css" />
+	<script src="jquery-1.11.2.js"></script>
+  
+	<head>
+		<title>Payment Page</title>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div id="sub-main">
+
+				<div id="open_box">
+					<button id="open" type="button">O Open</button>
+				</div>
+			
+				<div id="close_box">
+					<button id="close" type="button">X Close</button>
+				</div>
+
+				<div id="sub-left">
+					<p>
+						<span id="amount">$49</span>
+						<br>
+						<span id="name">Readymade</span>
+					</p>
+				</div>
+				<div id="sub-right">
+					<div id="payment">
+						<p id="form">
+							<span id="header">Credit Card Detail</span>
+							<form name="payment" id="payment-form" action="" method="post" accept-charset="utf-8">
+								<span class="payment-errors"></span>
+
+								<!-- Credit card number -->
+								<div class="form-row" id="credit">
+									<input type="text" id="input" data-stripe="number"/>
+								</div>
+
+								<!-- Expiration date -->
+								<div class="form-row" id="exp-date">
+									<select id="exp-month" name="Expiration Month">
+										<option value=""></option>
+										<option value="January">January</option>
+										<option value="February">February</option>
+										<option value="March">March</option>
+										<option value="April">April</option>
+										<option value="May">May</option>
+										<option value="June">June</option>
+										<option value="July">July</option>
+										<option value="August">August</option>
+										<option value="September">September</option>
+										<option value="October">October</option>
+										<option value="November">November</option>
+										<option value="December">December</option>
+									</select>
+
+									<select id="exp-year" name="Expiration Year">
+										<option value=""></option>
+										<option value="2015">2015</option>
+										<option value="2016">2016</option>
+										<option value="2017">2017</option>
+										<option value="2018">2018</option>
+										<option value="2019">2019</option>
+										<option value="2020">2020</option>
+										<option value="2021">2021</option>
+									</select>
+								</div>
+
+
+								<!-- CVC code -->
+								<div class="form-row" id="cvc">
+									<input type="text" size="4" data-strip="cvc"/>
+								</div>
+
+								<!-- Words for CVC -->
+								<div class="form-row" id="cvclabel">
+										3 or 4 digits usually found on signature strip.
+								</div>
+
+								<div class="form-row" id="checkout">
+									<button id="proceed" type="button"> Proceed </button>
+									<span text-align: center>Or </span>
+									<button id="paypal" type="button"> Pay with <strong>PayPal</strong> </button>
+								</div>
+							</form>
+						</p>
+					</div> <!-- end of "id=payment" -->
+				</div>  <!-- end of "id=sub-right" -->
+			</div> <!-- end of submain -->
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	$(document).on('click', '#close_box', function() {
+		$(this).parent().children().not("#open_box").fadeTo(300,0,function(){
+			$(this).toggle(function() {
+				$(this).fadeout();
+			});
+		});
+	});
+
+	$(document).on('click', '#open_box', function() {
+		$(this).parent().children().not("#open_box").fadeTo(300,0,function(){
+			$(this).toggle(function() {
+				$(this).fadein();
+			});
+		});
+	});
+
+	function checkLogin(form) { /* Function to check userID & password */
+		self = window.self
+		
+		/*check whether userid and password are correct */
+		if(form.username.value == "myuserid" && form.password == "mypswrd") {
+			window.open('target.html') /*open up the targe page */
+		}
+		else {
+			alert("Error in Password or Username!") //display error message
+			window.open('login.html')
+			self.close()
+		}
+	}
+</script>

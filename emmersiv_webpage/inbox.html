@@ -1,0 +1,102 @@
+<html lang="en">
+	<head>
+		<title>Inbox Page</title>
+		<link rel="stylesheet" type="text/css" href="inbox.css" />
+		<script src="jquery-1.11.2.js"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="myjs.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<img src="email.png">
+			<span id="title">Outlook</span>
+			<button id="new" type="button">New</button>
+		</div>
+		<div class="mailarea">	
+			<div class="nav">
+				<div id="search">
+					<input id="search" type="text" placeholder="Search email">
+				</div>
+				<div id="title">
+					<span>Folders</span>
+					<img src="credit.svg">
+				</div>
+				<div id="folders">
+					<button type="button" id="inbox"><a href="#">Inbox</a></button>
+					<button type="button" id="junk"><a href="#">Junk</a></button>
+					<button type="button" id="drafts"><a href="#">Drafts</a></button>
+					<button type="button" id="sent"><a href="#">Sent</a></button>
+					<button type="button" id="deleted"><a href="#">Deleted</a></button>
+					<button type="button" id="chats"><a href="#"Chats</a></button>
+					<button type="button" id="shopping"><a href="#">Shopping</a></button>
+					<button type="button" id="orders"><a href="#">Orders</a></button>
+					<button type="button" id="new"><a href="#">New Folder</a></button>
+				</div>
+
+				<div id="quick-view">
+					<span>Quick views</span>
+					<button type="button" id="flagged"><a href="#">Flagged</a></button>
+					<button type="button" id="photos"><a href="#">Photos</a></button>
+					<button type="button" id="office-docs"><a href="#">Office docs</a></button>
+					<button type="button" id="shipping"><a href="#">Shipping updates</a></button>
+					<button type="button" id="new"><a href="#">New category</a></button>
+				</div>
+			</div>
+
+			<!-- Inbox area -->
+			<div class="inbox">
+				<div class="checkall">
+					<div class="check" id="checkall">
+						<input type="checkbox">
+						<label>View: All</label>
+					</div>
+					<div class="arrange">
+						<span id="arrange">Arrange by</span>
+					</div>
+				</div>
+
+				<div class="inmails" id="mailbox_1">
+					
+				<!--
+					<div class="email" id="email_1">
+						<div class="check" id="check_1">
+							<input id="c1" type="checkbox">
+						</div>
+						<div class="sender" id="sender_1">
+							<span id="s1">Outlook Team</span>
+						</div>
+						<div class="subject" id="subject_1">
+							<span id="subj1">Welcome to Outlook.com</span>
+						</div>
+						<div class="date" id="date_1">
+							<span id="d1">9:20PM</span>
+						</div>
+					</div>
+
+					<div class="email" id="email_2">
+						<div class="check" id="check_2">
+							<input id="c2" type="checkbox">
+						</div>
+
+						<div class="sender" id="sender_2">
+							<span id="s2">Outlook Team</span>
+						</div>
+						<div class="subject" id="subject_2">
+							<span id="subj2">Welcome to Outlook.com</span>
+						</div>
+						<div class="date" id="date_2">
+							<span id="d2">19:20PM</span>
+						</div>
+					</div>
+				-->
+
+				</div>
+			</div>
+		</div>
+		<div class="footer">	
+			<hr>
+			<p class="footer-text">&copy;2014 Microsoft&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privacy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Developers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English (United States)</p>
+		</div>
+	</body>
+</html>

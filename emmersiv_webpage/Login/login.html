@@ -1,0 +1,47 @@
+<html lang="en">
+	<link rel="stylesheet" type="text/css" href="login.css" />
+
+	<head>
+		<title>Login Page</title>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<section class="loginform">
+
+			<!-- Create the form and action/methods -->
+			<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+				<ul>
+					<li><input type="username" name="username" placeholder="User Name"></li>
+					<li><input type="password" name="password" placeholder="Password"></li>
+				</ul>
+				<ul>
+					<li id="forgotpw">Forgot Password?</li>
+				</ul>
+				<ul>
+					<li id="login"><input type="submit" onclick="checkLogin(this.form)" value="LOGIN"></li>
+				</ul>
+				<ul>
+					<li id="createacct">New here? Create an account.</li>
+				</ul>
+			</form>
+			</section>
+		</div>
+	</body>
+</html>
+
+<script language="javascript">
+	function checkLogin(form) { /* Function to check userID & password */
+		self = window.self
+		
+		/*check whether userid and password are correct */
+		if(form.username.value == "myuserid" && form.password == "mypswrd") {
+			window.open('target.html') /*open up the targe page */
+		}
+		else {
+			alert("Error in Password or Username!") //display error message
+			window.open('login.html')
+			self.close()
+		}
+	}
+</script>

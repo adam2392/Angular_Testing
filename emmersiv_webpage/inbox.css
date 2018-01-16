@@ -1,0 +1,206 @@
+/********** Header *************/
+.header {
+	width: 100%;
+	height: 40px;
+	background-color: blue;
+	color: white;
+}
+
+.header img {
+	width: 50px;
+	height: 50px;
+}
+
+.header span {
+	position: relative;
+	height: 30px;
+	left: 5px;
+	top: -22px;
+	padding-right: 80px;
+}
+
+.header button {
+	position: relative;
+	vertical-align: 150%;
+	width: 70px;
+	height: 30px;
+	background: url('add.svg') no-repeat 0px 1px;
+	background-size: 30px 30px;
+	border: none;
+	text-align: right;
+	color: white;
+}
+
+.mailarea {
+	width: 100%;
+}
+
+/******** Nav Bar *************/
+.nav {
+	float: left;
+	background-color: #d3d3d3;
+	padding-bottom: 40px;
+	width: 17%;
+	height: 100%;
+}
+.nav #search {
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.nav #search input {
+	background: url(credit.svg) no-repeat scroll 120px -2px;
+	background-size: 30px 30px;
+	background-color: white;
+	width: 90%;
+	border: 1px solid gray;
+	padding: 5px 5px 5px 5px;
+}
+
+::-webkit-input-placeholder {
+	color: black;
+	font-family: Helvetica;
+}
+
+#title span {
+	float: left;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	font-family: Helvetica;
+	font-size: 20px;
+}
+
+#title img {
+	float: right;
+	height: 25px;
+	width: 20px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 8px;
+}
+
+#folders button {
+	width: 100%;
+	border: none;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+
+#folders a{
+	text-decoration: none;
+	color: black;
+}
+
+#folders #new a {
+	color: blue;
+}
+
+#quick-view>button:hover, #folders > button:hover {
+	background-color: gray;
+}
+
+
+#quick-view span, button{
+	width: 100%;
+}
+
+#quick-view span {
+	padding-left: 20px;
+	font-size: 20px;
+}
+
+#quick-view button {
+	border: none;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+
+#quick-view a {
+	color: black;
+	text-decoration: none;
+}
+
+#quick-view #new a{
+	color: blue;
+}
+
+
+/* Footer area for Social Media Connections */
+.footer {
+	position: bottom;
+	bottom: 0px;
+	width: 100%;
+	background-color: white;
+	float: right;
+}
+
+.footer-text {
+	font-size: 12px;
+	color: black;
+	float: left;
+	padding-left: 10px;
+}
+
+
+/******** inbox area *********/
+.inbox {
+	width: 100%;
+	height: 100%;
+	font-family: Helvetica;
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+.inbox input {
+	width: 15px;
+	height: 15px;
+	border: solid 1px gray;
+
+}
+
+.checkall {
+	overflow:hidden;
+}
+
+#checkall {
+	float:left;
+}
+
+.checkall div, .email div {
+	display: inline-block;
+	padding-top: 5px;
+}
+
+.check {
+	padding-left: 20px;
+	float: left;
+}
+
+#email_1{
+	padding-top: 10px;
+}
+
+.arrange {
+	float: right;
+}
+
+.email {
+	width: 100%;
+	height: 30px;
+}
+
+.email > .date {
+	float: right;
+}
+.email > .subject {
+	float: middle;
+}
+.email > .sender {
+	width: 200px;
+}

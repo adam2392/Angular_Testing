@@ -1,0 +1,181 @@
+body {
+	background: url(payment.jpg) no-repeat center fixed;
+	background-size: cover;
+}
+
+#sub-main{
+	margin: 0 auto;
+	width: 500px;
+	margin-top: 50px;
+	height: 350px;
+}
+/* the close button */
+#close {
+	float: right;
+	padding-bottom: 5px;
+	color: white;
+	font-style: bold;
+	font-family: Helvetica;
+	border: none;
+	background: none;
+}
+
+#open {
+	float: right;
+	padding-bottom: 5px;
+	color: white;
+	font-style: bold;
+	font-family: Helvetica;
+	border: none;
+	background: none;
+}
+
+/* The left div wrapper */
+#sub-left {
+	float: left;
+	width: 200px;
+	height: 400px;
+	background: #d3d3d3;
+	text-align: center;
+	display: table;	/* Make the div into a table, so that the span can be centered vertically */
+	margin-top: 21px;
+}
+
+#sub-left > p {
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+	line-height: 30px;
+	
+}
+
+#sub-left #amount {
+	color: green;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Helvetica;
+}
+
+#name {
+	font-family: Helvetica;
+	margin-top: 10px;
+}
+
+/* The right div wrapper */
+#sub-right {
+	float:right;
+	width: 300px;
+	height: 400px;
+	background: white;
+	text-align: center;
+}
+
+#sub-right form {
+	width: 100%;
+	vertical-align: middle;
+	line-height: 30px;
+}
+
+#payment {
+	width: 250px;
+	height: 350px;
+	padding-left: 30px;
+	padding-top: 50px;
+}
+
+#header {
+	line-height: 1px;
+	font-size: 20px;
+	float: left;
+	padding-bottom: 10px;
+}
+
+
+/* Targets all the form rows */
+.form-row {
+	float: left;
+	padding-top: 10px;
+}
+
+/* Credit card info */
+#credit input {
+	background: url(credit.svg) no-repeat scroll 210px 0px;
+	background-size: 30px 30px;
+	padding-left: 10px;
+	padding-right: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+
+	border-radius: 5px;
+	height: 30px;
+	width: 240px;
+	border: 1px solid gray;
+}
+
+/* CVC */
+#cvc input {
+	width: 55px;
+	height: 30px;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+
+	border: 1px solid gray;
+}
+
+#cvclabel {
+	font-size: 11px;
+	font-family: Helvetica;
+	color: #a9a9a9;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: -30px;
+
+	line-height: 15px;
+
+	width: 160px;
+	height: 10px;
+}
+
+/* Exp-date */
+#exp-month {
+	width: 120px;
+	height: 30px;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+#exp-year {
+	width: 115px;
+	height: 30px;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+/* Payment area */
+#checkout {
+	padding-top: 20px;
+	font-family: Helvetica;
+	color: gray;
+}
+#proceed {
+	background-color: green;
+	color: white;
+	width: 250px;
+	height: 45px;
+	border-radius: 2px;
+	border: none;
+}
+
+#paypal {
+	background-color: blue;
+	color: white;
+	width: 250px;
+	height: 45px;
+	border-radius: 2px;
+	border: none;
+}

@@ -1,0 +1,231 @@
+/* Header */
+.header {
+	width: 100%;
+	height: 30px;
+	background-color: white;
+}
+
+.header img {
+	width: 85px;
+	height: 25px;
+	vertical-align: 40%;
+}
+.header #title {
+	vertical-align: 90%;
+	color: blue;
+}
+
+/* Nav Bar */
+.nav {
+	width: 100%;
+	height: 40px;
+	background-color: blue;
+}
+
+.wrapper {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.wrapper-dropdown-1 {
+    /* Size and position */
+    position: relative; /* Enable absolute positionning for children and pseudo elements */
+    width: 90px;
+    padding: 10px;
+    margin: 0 auto;
+
+    /* Styles */
+    color: white;
+    outline: none;
+    cursor: pointer;
+
+    /* Font settings */
+    font-family: Helvetica;
+}
+
+.wrapper-dropdown-1:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -6px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent #fff;    
+}
+
+.wrapper-dropdown-1 .dropdown {
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    /* Styles */
+    background: #fff;
+    list-style: none;
+    font-weight: normal; /* Cancels previous font-weight: bold; */
+
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper-dropdown-1 .dropdown li a {
+    display: block;
+    text-decoration: none;
+    font-family: Helvetica;
+    color: blue;
+    padding: 10px 20px;
+}
+
+/* Hover state */
+.wrapper-dropdown-1 .dropdown li:hover a {
+    background: #f3f8f8;
+}
+
+/* Active state */
+.wrapper-dropdown-1.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Buttons */
+.wrapper button {
+	background-color: blue;
+	color: white;
+	border: none;
+	height: 38px;
+
+	padding-left: 10px;
+}
+
+.settings {
+	float: right;
+	width: 100px;
+	height: 38px;
+	padding-top: 10px;
+}
+.settings #name{
+	background: url(credit.svg) no-repeat scroll 60px -5px;
+	background-size: 30px 30px;
+	font-family: Helvetica;
+	height: 50px;
+	width: 80px;
+	padding-right: 30px;
+}
+
+
+/* Mail Header */
+.mail-header {
+	width: 100%;
+	background-color: gray;
+}
+
+#self {
+	width: 100%;
+	height: 100px;
+}
+
+#self img {
+
+}
+#self #name {
+	position: relative;
+	top: -65px;
+	left: -20px;
+}
+
+#self #email {
+	position: relative;
+	top: -40px;
+	left: -80px;
+}
+
+.mail-header #address {
+	width: auto;
+	padding-top: 30px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+.mail-header #address input {
+	width: 100%;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.mail-header #address #to {
+	color: blue;
+	padding-bottom: 5px;
+	float: left;
+}
+
+#bcc {
+	color: blue;
+	float: right;
+	padding-bottom: 5px;
+}
+
+
+/*********** mail body section **************/
+.mail-body #subject, #body{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.mail-body input{
+	width: 100%;
+	border: none;
+	outline: none;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.mail-body textarea {
+	height: 300px;
+	width: 100%;
+	border: none;
+	outline: none;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+::-webkit-input-placeholder {
+	color: black;
+	font-family: Helvetica;
+}
+
+::-webkit-textarea-placeholder {
+	color: black;
+	font-family: Helvetica;
+}
+
+.mail-body hr {
+	width: 98%;
+}
+
+/* Footer area for Social Media Connections */
+.footer {
+	position: relative;
+	left: 0;
+	bottom: 0px;
+
+	width: 100%;
+	background-color: white;
+	float: right;
+}
+
+.footer-text {
+	font-size: 12px;
+	color: black;
+	float: left;
+	padding-left: 10px;
+}
